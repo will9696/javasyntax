@@ -1,0 +1,232 @@
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.container-title5 {
+  color: white;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.title > * {
+  display: inline-block;
+  font-size: 200px;
+}
+
+.number {
+  text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  padding: 0 0.2em;
+  font-family: "Russo One", sans-serif;
+}
+
+.subtitle {
+  font-size: 25px;
+  margin-top: 1.5em;
+  font-family: "Lato", sans-serif;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.moon {
+  position: relative;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #ff1177;
+  -webkit-animation: rotate 5s ease-in-out infinite;
+          animation: rotate 5s ease-in-out infinite;
+}
+.moon .face {
+  top: 60%;
+  left: 47%;
+  position: absolute;
+}
+.moon .face .mouth {
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: #5c3191;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  -webkit-animation: snore 5s ease-in-out infinite;
+          animation: snore 5s ease-in-out infinite;
+  transform: rotate(45deg);
+  box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.3);
+}
+.moon .face .eyes {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+.moon .face .eyes .eye-left,
+.moon .face .eyes .eye-right {
+  border: 4px solid #5c3191;
+  width: 30px;
+  height: 15px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+  position: absolute;
+}
+.moon .face .eyes .eye-left:before, .moon .face .eyes .eye-left:after,
+.moon .face .eyes .eye-right:before,
+.moon .face .eyes .eye-right:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: #5c3191;
+  top: -2px;
+  left: -4px;
+}
+.moon .face .eyes .eye-left:after,
+.moon .face .eyes .eye-right:after {
+  left: auto;
+  right: -4px;
+}
+.moon .face .eyes .eye-right {
+  left: 50px;
+}
+
+
+
+@-webkit-keyframes rotate {
+  0%, 100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes snore {
+  0%, 100% {
+    transform: scale(1) rotate(30deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+    border-bottom-left-radius: 50%;
+  }
+}
+@keyframes snore {
+  0%, 100% {
+    transform: scale(1) rotate(30deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+    border-bottom-left-radius: 50%;
+  }
+}
+@-webkit-keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+@-webkit-keyframes wingLeft {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(-50deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotateX(-130deg);
+    background: linear-gradient(to bottom, #d9d3e2 0%, #b8a5d1 100%);
+  }
+}
+@keyframes wingLeft {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(-50deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotateX(-130deg);
+    background: linear-gradient(to bottom, #d9d3e2 0%, #b8a5d1 100%);
+  }
+}
+@-webkit-keyframes wingLeftTop {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(-10deg);
+  }
+  50% {
+    transform: translate3d(0px, 0px, 0) rotateX(-40deg);
+    border-bottom: 20px solid #b8a5d1;
+  }
+}
+@keyframes wingLeftTop {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(-10deg);
+  }
+  50% {
+    transform: translate3d(0px, 0px, 0) rotateX(-40deg);
+    border-bottom: 20px solid #b8a5d1;
+  }
+}
+@-webkit-keyframes wingRight {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(50deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotateX(130deg);
+    background: linear-gradient(to bottom, #a58dc4 0%, #7979a8 100%);
+  }
+}
+@keyframes wingRight {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateX(50deg);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0) rotateX(130deg);
+    background: linear-gradient(to bottom, #a58dc4 0%, #7979a8 100%);
+  }
+}
+
+
+@media screen and (max-width: 580px) {
+  .container-404 {
+    width: 100%;
+  }
+
+  .number {
+    font-size: 100px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    padding: 0 1em;
+  }
+
+  .moon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .face {
+    transform: scale(0.7);
+  }
+}
